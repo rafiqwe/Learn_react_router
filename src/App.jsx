@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
-import { Contact } from "./pages/Contact";
+import { Contact, getFormData } from "./pages/Contact";
 import { Movie } from "./pages/Movie";
 import AppLayOut from "./components/layout/AppLayOut";
 import { ErrorPage } from "./pages/ErrorPage";
@@ -39,6 +39,7 @@ const App = () => {
         {
           path: "/contact",
           element: <Contact />,
+          action: getFormData,
         },
 
       ],
